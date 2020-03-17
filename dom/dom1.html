@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // getting syntax
+      document.getElementsByTagName('tagname'); // div ,p ,h1 ,span
+      document.getElementsByClassName('classname'); // .column  ,.containe
+      document.getElementById('id'); // #firstName ,#age
+      const allTitles = document.querySelectorAll('h1'); // h1
+
+      //adding attribute
+      const titles = document.querySelectorAll('h1');
+      titles[3].class = 'title';
+      titles[3].id = 'fourth-title';
+
+      const titles = document.querySelectorAll('h1');
+      titles[3].setAttribute('class', 'title');
+      titles[3].setAttribute('id', 'fourth-title');
+
+      titles[3].classList.add('title', 'header-title');
+      titles[3].classList.remove('title', 'header-title');
+
+      // adding text
+      const titles = document.querySelectorAll('h1');
+      titles[3].textContent = 'Fourth Title';
+
+      //adding style
+      const titles = document.querySelectorAll('h1');
+      titles.forEach((title, i) => {
+        title.style.fontSize = '24px'; // all titles will have 24px font size
+        if (i % 2 === 0) {
+          title.style.color = 'green';
+        } else {
+          title.style.color = 'red';
+        }
+      });
+
+      const titles = document.querySelectorAll('h1');
+      titles.forEach((title, i) => {
+        title.style.fontSize = '24px'; // all titles will have 24px font size
+        if (i % 2 === 0) {
+          title.style.backgroundColor = 'green';
+        } else {
+          title.style.backgroundColor = 'red';
+        }
+      });
+    </script>
+  </body>
+</html>

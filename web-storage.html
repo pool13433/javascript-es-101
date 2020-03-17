@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+          //setter syntax
+      localStorage.setItem('key', 'value')
+
+      //Storing string in a localStorage
+      localStorage.setItem('firstName', 'Asabeneh') // since the value is string we do not stringify it
+      console.log(localStorage)
+
+      //Storing number in a local storage
+      localStorage.setItem('age', 200)
+      console.log(localStorage)
+
+      //getter syntax
+      localStorage.getItem('key')
+
+      let firstName = localStorage.getItem('firstName')
+      let age = localStorage.getItem('age')
+      let skills = localStorage.getItem('skills')
+      console.log(firstName, age, skills)
+
+      //clearing the localStorage
+      //The clear method, will clear everything stored in the local storage
+      localStorage.clear()
+    </script>
+  </body>
+</html>

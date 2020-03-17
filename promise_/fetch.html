@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea id="output" cols="30" rows="30" style="width: 100%;"></textarea>
+    <script>
+      // fetch
+      const url = 'https://restcountries.eu/rest/v2/all'; // countries api
+      fetch(url)
+        .then(response => response.json()) // accessing the API data as JSON
+        .then(data => {
+          // getting the data
+          console.log(data);
+          document.getElementById('output').innerHTML = JSON.stringify(data)
+        })
+        .catch(error => console.log(error)); // handling error if something wrong happens
+
+      // async ,await
+      const square = async function(n) {
+        return n * n;
+      };
+      square(2);
+      // Promise {<resolved>: 4}
+
+      const square1 = async function(n) {
+        return n * n;
+      };
+      (async function() {
+        const value = await square1(2);
+      })();
+      // 4
+    </script>
+  </body>
+</html>

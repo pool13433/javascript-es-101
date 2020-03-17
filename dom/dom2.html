@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // syntax
+      document.createElement('tagname');
+
+      let title = document.createElement('h1');
+      title.className = 'title';
+      title.style.fontSize = '24px';
+      title.textContent = 'Creating HTML element DOM Day 2';
+
+      console.log(title);
+
+      // Appending child to a parent element
+      document.body.appendChild(title);
+
+      //remove
+      const ul = document.querySelector('ul');
+      const lists = document.querySelectorAll('li');
+      for (const list of lists) {
+        ul.removeChild(list);
+      }
+    </script>
+  </body>
+</html>
